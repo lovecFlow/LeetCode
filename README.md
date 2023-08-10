@@ -1,9 +1,9 @@
 # Решения задач с LeetCode'a
-
+```Golang
 package main
 
 import "fmt"
-```Golang
+
 func main() {
 	// maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4})
 	maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4})
