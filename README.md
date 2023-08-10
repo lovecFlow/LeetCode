@@ -48,8 +48,10 @@ func maxArea(height []int) int {
 	res := 0                        //* Начальный показатель/результат
 	left, right := 0, len(height)-1 //* Ставим начало и конец для поиска с двумя указателями
 	for left < right {              //* Ставим while
-		currentMax := min(height[left], height[right]) * (right - left) //*Функция min выдаёт нам меньшее число, которое мы умножаем на разницу между концом(right) и началом(left). Тут будет начальный показатель.
-		if currentMax > res {                                           //*Условие для заноса ответа в res
+		currentMax := min(height[left], height[right]) * (right - left) //*Функция min выдаёт нам меньшее число,
+//*которое мы умножаем на разницу между концом(right) и началом(left). Тут будет начальный показатель.
+
+		if currentMax > res {       //*Условие для заноса ответа в res
 			res = currentMax
 		}
 		if height[left] < height[right] { //*Услоиве для движения указателей
