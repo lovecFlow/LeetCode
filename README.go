@@ -1,4 +1,4 @@
-Решения задач с LeetCode'a
+#Решения задач с LeetCode'a
 
 package main
 
