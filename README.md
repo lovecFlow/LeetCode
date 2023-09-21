@@ -232,4 +232,37 @@ func maxProduct(nums []int) int {
 		currentMax = 
 	}
 }
+//?============================================================================================================
+
+func missingNumber(nums []int) int {
+	result := 0
+
+	for i := 0; i <= len(nums); i++ {
+		result ^= i
+		fmt.Println(result)
+	}
+
+	for _, i := range nums {
+		result ^= i
+		// fmt.Println(i)
+	}
+
+	fmt.Println(result)
+	return result
+}
+
+func missingNumber(nums []int) int {
+	len := len(nums)
+	realsum := 0
+	sum := (1 + len) * len / 2
+	// fmt.Println(sum)
+
+	for _, v := range nums {
+		realsum += v
+
+		fmt.Println(realsum)
+	}
+
+	return sum - realsum
+}
 ```
