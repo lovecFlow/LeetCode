@@ -62,19 +62,18 @@ func maxArea(height []int) int {
 	}
 	return res
 }
+=============================================================================================================
 
 func twoSum(nums []int, target int) []int {
-	indexMap := make(map[int]int)  //Создаём мапу с длинной nums
-	for currIndex, currNum := range nums { //Перебор каждого элемента массива, начиная с первого
-		if requiredIdx, isPresent := indexMap[target-currNum]; isPresent { // В каждой итерации проверяем,
-					//* присутствует ли требуемое число (target = nums - текуще ) в хэш-карте.
-
-		return []int{requiredIdx, currIndex}  //Если присутствует,
-							вернуть в качестве результата {требуемый числовой индекс, текущий числовой индекс} . 
-		}
-		indexMap[currNum] = currIndex
-	}
-	return []int{}
+    m := make(map[int]int, len(nums)) 
+    
+    for i, num := range nums {
+        if idx, ok := m[target - num]; ok {
+            return []int{idx, i}            
+        } 
+        m[num] = i
+    }
+    return []int{0, 0}
 }
 
 //?=======================================================================================
